@@ -71,8 +71,8 @@ header{
 #chevron{
   display: none;
   position: absolute;
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   justify-content: center;
   align-items: center;
   left: 0px;
@@ -80,12 +80,12 @@ header{
   background-image: url('../assets/chevron-down-solid.svg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 30px;
+  background-size: 22px;
 }
 @media (max-width: 900px) {
   header{
     height: 400px;
-    top: -320px;
+    top: -340px;
   }
   #chevron{
     display: flex;
@@ -111,10 +111,14 @@ header{
     content: none;
   }
   .selected{
-    background-color: rgba(0, 0, 0, .1);
+    background-image: linear-gradient(#ccc, #eee);
   }
   header.DrawerOpen{
   top: 0px;
+  }
+  #logo{
+    width: 140px;
+    bottom: -30px;
   }
 }
 
