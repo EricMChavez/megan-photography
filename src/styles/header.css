@@ -1,0 +1,120 @@
+header{
+  height: 80px;
+  width: 100vw;
+  
+  position: fixed;
+  display: flex;
+  justify-content: center;
+
+  font-family: 'Nunito', sans-serif;
+  background-color: white;
+  
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+
+  transition: 300ms;
+}
+#headerLinks{
+  width: 100vw;
+  max-width: 1500px;
+  display: flex;
+  position: relative;
+}
+#logo{
+  position: absolute;
+  left: 50vw;
+  width: 187px;
+  bottom: -42px;
+  transform: translate(-50%);
+  z-index: 1;
+}
+.navLink{
+  height: 100%;
+  font-size: 18px;
+  letter-spacing: 3px;
+  transition: 300ms;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.navLink:hover{
+  letter-spacing: 5px;
+}
+.navLink::after{
+  content: '';
+  position: absolute;
+  bottom: 35%;
+  left: 50%;
+  right: 50%;
+  top: calc(65% - 1px);
+  background-color: black;
+  transition: 300ms;
+}
+.selected::after,
+.navLink:hover::after{
+  left: 0;
+  right: 5px;
+}
+#headerLeft{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  width: 100%;
+  margin-right: 200px;
+}
+#headerRight{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  width: 100%;
+}
+#chevron{
+  display: none;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  justify-content: center;
+  align-items: center;
+  left: 0px;
+  bottom: 0px;
+  background-image: url('../assets/chevron-down-solid.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
+@media (max-width: 900px) {
+  header{
+    height: 400px;
+    top: -320px;
+  }
+  #chevron{
+    display: flex;
+  }
+  #chevron.DrawerOpen{
+    transform: rotate(180deg)
+  }
+  #headerRight,
+  #headerLeft{
+    height: 140px;
+    grid-template-columns: 1fr;
+  }
+  #headerLinks{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .navLink{
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+  }
+  .navLink::after{
+    content: none;
+  }
+  .selected{
+    background-color: rgba(0, 0, 0, .1);
+  }
+  header.DrawerOpen{
+  top: 0px;
+  }
+}
+
