@@ -49,10 +49,9 @@ NavLink,
 .btn{
 	cursor: pointer;
 }
-.lable{
-	height: 100vh;
-	width: 100vw;
+:root{ font-family: 'Nunito', sans-serif;}
+.page{
+	padding-top: 80px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	
 }

@@ -1,0 +1,72 @@
+#formBox{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+#bookForm{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+ background-color: #eee;
+ box-shadow: 5px 5px 10px rgba(0, 0, 0, .2),2px 2px 3px rgba(0, 0, 0, .1);
+  margin: 100px;
+  padding: 40px;
+  border-radius: 8px;
+}
+.formLable{
+  grid-area: 1/1/2/3;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+ 
+}
+.inputField{
+  position: relative;
+}
+
+textarea,
+input{
+  border: 1px #999 solid;
+  border-radius: 3px;
+  padding: 18px;
+  font-size: 15px;
+  width: calc(100% - 36px);
+  resize: none;
+
+}
+label{
+  position: absolute;
+  top: -19px;
+  left: -20px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  background-color: white;
+  font-size: 10px;
+  box-shadow: 1px 1px 1px #999;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  font-weight: bolder;
+
+}
+.bookMessage{
+  grid-area: 3/1/4/3;
+}
+.submitBtn{
+  grid-area: 4/2/5/3;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  box-shadow: 1px 1px 1px #999;
+  height: 50px;
+  margin: 0 0 0 50px;
+  background-color: rgb(251, 121, 110);
+  color: white;
+}
+.page{
+
+
+}

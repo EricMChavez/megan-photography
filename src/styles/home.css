@@ -43,11 +43,7 @@ background-image: url('../assets/splash3.jpg');
   background-color: rgba(255, 255, 255, .5);
   align-items: center;
   background-color: rgb(172, 89, 169);
-  background-image: radial-gradient(
-    circle at top,
-    white 5%,
-    transparent 5%
-  )
+
 }
 
 .about{
@@ -57,13 +53,103 @@ background-image: url('../assets/splash3.jpg');
   display: inline;
 
 }
+.container{
+  display: grid;
+  grid-template-columns: minmax(50px, auto) minmax(300px ,700px) minmax(50px,auto);
+  font-family: 'Roboto Slab', serif;
+  place-items: center;
+}
 #face{
   background-image: url('../assets/megan-face.jpeg');
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
+  border-radius: 400px;
+  height: 250px;
+  width: 250px;
+  border: white 15px solid;
+  position: absolute;
+  top: -166px;
+  right: -125px;
 }
+
 .large{
   font-size: 70px;
   display: inline;
+}
+.cardTitle{
+  font-size: 50px;
+  position: absolute;
+  top: 50px;
+  text-indent: 0px;
+
+}
+.textCard{
+  padding: 100px 50px 50px;
+  grid-area: 1/2/2/3;
+  background-color: rgb(234, 204, 246);
+  position: relative;
+  margin: 200px 0 100px;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 15px;
+  text-indent: 30px;
+}
+.values{
+  display: grid;
+  grid-gap: 30px;
+  grid-area: 1/2/2/3;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-template-areas: "value-1 photo-1 value-2" "photo-2 value-3 photo-3";
+  margin: 100px 0;
+
+}
+.value{
+  height: 160px;
+  width: 160px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, .2), 0px 0px 10px rgba(0, 0, 0, .3);
+  letter-spacing: 3px; 
+  text-align: center;
+  padding: 20px;
+  border-radius: 3px;
+}
+.value-1{
+  grid-area: value-1;
+  background-color: rgb(190, 80, 101);
+}
+.value-2{
+  grid-area: value-2;
+  background-color: #F1A66A;
+}
+.value-3{
+  grid-area: value-3;
+  background-color: #9593D9;
+}
+.photo-1{
+  grid-area: photo-1;
+  background-image:url('../assets/value1.jpeg')
+}
+.photo-2{
+  grid-area: photo-2;
+  background-image:url('../assets/value2.jpeg')
+
+}
+.photo-3{
+  grid-area: photo-3;
+  background-image:url('../assets/value3.JPG')
+
+}
+@media (max-width: 900px) {
+  .values{
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas: "value-1 photo-1" "photo-2 value-2" "value-3 photo-3";
+  }
 }

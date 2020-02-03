@@ -1,20 +1,34 @@
 import React from 'react';
+import {
+  NavLink
+} from "react-router-dom";
 import '../styles/home.css'
 const Home = () => {
   return ( 
     <React.Fragment>
     
     <div className="bgImg"/>
-    <div className="cta btn">BOOK A SESSION</div>
-
-    <div className="whitePg">
-      <div className="about">
-      <div className="large">Hello, </div> my name is Megan Chavez. I am a photographer based in Conroe, Texas. If I am not behind a camera, I am happily an Aunt to my adorable niece and nephew. I love snuggling with my dog, hanging out with my friends and siblings, especially eating Chick-Fil-A with them. If you think I am a good fit for you, make sure to contact me to set up a session.
+    <NavLink to="/book" className="cta btn">BOOK A SESSION</NavLink>
+    <div className="container">
+      <div className="textCard">
+        <div className="cardTitle">Buenos Dias,</div>
+        Lorem ipsum ied ratione reprehenderit doloremque ipsa sequi, sapiente provident nisi deleniti, quos qui veniam quaerat sunt at enim est quibusdam minima aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel qui debitis fugit blanditiis accusamus reiciendis consequatur laboriosam sed quibusdam minus placeat, reprehenderit nostrum, doloremque totam rem sit aut iure vero!
+        <div id="face"/>
       </div>
-      <div id="face"/>
+      
+    </div>
+    <div className="container">
+      <div className="values">
+        <div className="value value-1">TIMELESS</div>
+        <div className="value value-2">1,000 WORD VALUE</div>
+        <div className="value value-3">PRETTY COLORS</div>
+        <div className="value photo-1"/>
+        <div className="value photo-2"/>
+        <div className="value photo-3"/>
+      </div>
     </div>
     </React.Fragment>
-   );
+  );
 }
- 
+
 export default Home;
